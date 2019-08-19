@@ -24,3 +24,11 @@ Here's the basic directory structure;
 └── wsgi.py
 
 ```
+
+### Project Set up
+- clone this repository
+- cd into project folder
+- create a virtual environment i.e virtualenv venv
+- activate virtual environment i.e source venv/bin/activate
+- run pip install -r requirements.txt
+- start the project : python wsgi.py
