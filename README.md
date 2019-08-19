@@ -1,6 +1,6 @@
-# Flast Starter App
+# SMS Client Api
 
-###### This is a basic example that shows how to setup a flask application
+###### This is an sms service that provides endpoints for sending sms via either Nexmo or AfricasTalking
 
 Here's the basic directory structure;
 ```
@@ -24,37 +24,3 @@ Here's the basic directory structure;
 └── wsgi.py
 
 ```
-
-**models** - This holds all your data classes and utility functions that interact with any kind of persitence 
-(Mongo, Mysql etc) 
-
-**resources** - This package usually holds endpoints related to an API. Try avoid putting view endpoints here. Put them
-in the `view` package instead
-
-**view** - This package holds any endpoint that deals with any visual representation i.e endpoints that return html
-
-**templates** - Put all your `.html` files here
-
-**utils** - Put utility functions here. Mostly reusable logic used in the `view` and `resources`
-
-**config.py** - All app your configuration goes here. Remember to put the right config in the right class. Anything 
-reusable should go in `Config`
-
-
-This is not a strict **life or death** way of structuring a flask app. Remember programming is art. As long as your app 
-can be testable go with whatever makes you sleep at night :relieved:
-
-**Tips (Frequent updates expected):**
-1. For any file in the `models` package. Make sure it's within a class or method/function. It makes it easy to mock stuff
-during testing
-2. While organizing your models be careful while using the `orgranize imports` feature available in text editors and IDEs
-it can affect how your models are loaded(i.e relationships) thus prevent your app from starting.
-3. While testing your endpoints start with **negative vibes first**. Basically, start testing for non 200/201 responses first
-4. Any method/function/class in the `utils` package should depend on anything local outside the utils package. In fact, dependencies
-should be passed in as parameters. It helps prevent cyclic dependencies
-
-**Further References:**
-
-- [Flask Project Layout](http://flask.pocoo.org/docs/1.0/tutorial/layout/)
-- [Organizing your project](http://exploreflask.com/en/latest/organizing.html)
-- [Structure of a flask project](https://lepture.com/en/2018/structure-of-a-flask-project)
